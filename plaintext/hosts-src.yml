@@ -1,0 +1,41 @@
+all:
+  vars:
+    ansible_connection: ssh
+    ansible_ssh_user: centos
+    ansible_become: true
+    security_mode: plaintext
+preflight:
+  hosts:
+    ec2-35-175-133-77.compute-1.amazonaws.com:
+    ec2-35-175-201-43.compute-1.amazonaws.com:
+    ec2-100-26-135-171.compute-1.amazonaws.com:
+    ec2-35-172-164-35.compute-1.amazonaws.com:
+    ec2-34-204-206-32.compute-1.amazonaws.com:
+zookeeper:
+  hosts:
+    ec2-35-175-133-77.compute-1.amazonaws.com:
+    ec2-35-175-201-43.compute-1.amazonaws.com:
+    ec2-100-26-135-171.compute-1.amazonaws.com:
+broker:
+  hosts:
+    ec2-35-175-133-77.compute-1.amazonaws.com:
+      kafka:
+        broker:
+          id: 1
+    ec2-35-175-201-43.compute-1.amazonaws.com:
+      kafka:
+        broker:
+          id: 2
+    ec2-100-26-135-171.compute-1.amazonaws.com:
+      kafka:
+        broker:
+          id: 3
+connect-distributed:
+  hosts:
+    ec2-35-172-164-35.compute-1.amazonaws.com:
+schema-registry:
+  hosts:
+    ec2-34-204-206-32.compute-1.amazonaws.com:
+control-center:
+  hosts:
+    ec2-34-204-206-32.compute-1.amazonaws.com:

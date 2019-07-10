@@ -5,17 +5,17 @@ broker:
   config:
     port: 9092
 confluent:
-  package_name: confluent-platform-2.11
+  package_name: confluent-platform-2.12
   repository:
     debian:
     redhat:
       main:
-        baseurl: https://s3-us-west-2.amazonaws.com/confluent-packages-4.1.2/rpm/4.1
+        baseurl: https://s3-us-west-2.amazonaws.com/staging-confluent-packages-5.3.0/rpm/5.3
         gpgcheck: 1
-        gpgkey: https://s3-us-west-2.amazonaws.com/confluent-packages-4.1.2/rpm/4.1/archive.key
+        gpgkey: https://s3-us-west-2.amazonaws.com/staging-confluent-packages-5.3.0/rpm/5.3/archive.key
         enabled: 1
       dist:
-        baseurl: https://s3-us-west-2.amazonaws.com/confluent-packages-4.1.2/rpm/4.1/7
+        baseurl: https://s3-us-west-2.amazonaws.com/staging-confluent-packages-5.3.0/rpm/5.3/7
         gpgcheck: 1
-        gpgkey:  https://s3-us-west-2.amazonaws.com/confluent-packages-4.1.2/rpm/4.1/archive.key
+        gpgkey:  https://s3-us-west-2.amazonaws.com/staging-confluent-packages-5.3.0/rpm/5.3/archive.key
         enabled: 1
